@@ -19,37 +19,17 @@ on IMDB, with their genres and ratings and such, while the latter has a primary 
 we thought this would be perfect for this project.
 
 Video Game Recommendation Techniques
-CSC 240 - Spring 2023
 
-Amber Lai
-alai8@u.rochester.edu
- University of Rochester
- Rochester, NY
-Ethan Leung
-eleung6@u.rochester.edu
- University of Rochester
- Rochester, NY
-Kyle Chang
- kchang27@u.rochester.edu
- University of Rochester
- Rochester, NY
-
-
-
-ABSTRACT
+# ABSTRACT
 The purpose was to be able to create a recommendation system for Steam video games based on various genres and the hours played by different users. There were two datasets utilized from Kaggle.com, the first one being about IMDB games and the other about Steam games. The paper observes the effect of two different techniques, with cosine similarity as the baseline and singular value decomposition to build off it to see how well it can recommend games based on certain attributes. Through various features such as different games and user data, the results were visualized through both a heatmap and similarity matrix.
-KEYWORDS
-Data Preprocessing, Exploratory Data Analysis, Cosine similarity, Singular Value Decomposition 
-ACM Reference format:
-Amber Lai, Ethan Leung and Kyle Chang. 2023. Video Game Recommendation Techniques: CSC 240 - Spring 2023. ACM, New York, NY, USA, 4 pages. 
-1 INTRODUCTION
-	Video games have become a prevalent part of our culture as one of the most popular forms of entertainment. Within this industry, new video games have constantly been pushed out  in order to maintain the interests of the users. This has led to millions of video games with a wide assortment of topics being made available. With this in mind, a method to figure out how to recommend new video games among these millions of different games was to be explored. 
-	Steam has been widely regarded as one of the more popular game platforms that hosts thousands of games and allows for updates and purchases all in one place. With the wide variety of games and millions of players, we chose to focus on just Steam games for our recommendation system. 
-	There were two data sets that were used both about video games and from Kaggle, the first one was a Steam dataset that had about 11,000 users with various playtimes for different Steam games, while the second was from IMDB which included 20,803 entries about a wide variety of genres for each game. The main objective was to combine features from both of these data sets such as the user play time and genres for each game in order to recommend similar games based on an input. The approach in order to accomplish this included: Exploratory Data Analysis, Preprocessing, and Analysis. 
 
+# INTRODUCTION
+Video games have become a prevalent part of our culture as one of the most popular forms of entertainment. Within this industry, new video games have constantly been pushed out in order to maintain the interests of the users. This has led to millions of video games with a wide assortment of topics being made available. With this in mind, a method to figure out how to recommend new video games among these millions of different games was to be explored. 
+Steam has been widely regarded as one of the more popular game platforms that hosts thousands of games and allows for updates and purchases all in one place. With the wide variety of games and millions of players, we chose to focus on just Steam games for our recommendation system. 
+There were two data sets that were used both about video games and from Kaggle, the first one was a Steam dataset that had about 11,000 users with various playtimes for different Steam games, while the second was from IMDB which included 20,803 entries about a wide variety of genres for each game. The main objective was to combine features from both of these data sets such as the user play time and genres for each game in order to recommend similar games based on an input. The approach in order to accomplish this included: Exploratory Data Analysis, Preprocessing, and Analysis. 
 Exploratory data analysis allows for initial investigations on the data to get a sense of how it is formatted (outliers and patterns) through statistical summaries. Data preprocessing is a method in which we clean/manipulate the data in order to utilize it for analysis. For the analysis portion of the project, we applied cosine similarity and singular value decomposition. 
 
-2 EXPLORATORY DATA ANALYSIS 
+# EXPLORATORY DATA ANALYSIS 
 The first part of our project was to do some analysis on how the data was formatted from both of the sources. After doing a basic summary, it was shown that none of the columns had null values and what the data type of each of the columns were. To explore the data, we chose to use pandas to get it in a dataframe from a csv. 
 
 

@@ -15,12 +15,15 @@ The first part of our project was to do some analysis on how the data was format
 
 ![Capture-2024-01-06-224648](https://github.com/awnby/videoGameRecommender/assets/151482772/c282281c-ff21-4d0e-b28d-9d34c1bb1aaf)
 ![Capture-2024-01-06-224754](https://github.com/awnby/videoGameRecommender/assets/151482772/c26be3d1-44ad-4438-b42f-1aea67163e01)
+
 Figure 1: Summary of Steam and IMDB dataset columns and their attributes 
 
 ![Capture-2024-01-06-224816](https://github.com/awnby/videoGameRecommender/assets/151482772/0e8cda9c-1255-406d-9d7e-a304a6d309ca)
+
 Figure 2: Graphical summary of genres for all of the different games 
 
 ![Capture-2024-01-06-224833](https://github.com/awnby/videoGameRecommender/assets/151482772/13b532ba-9e0a-417a-8d88-14cf0281a56d)
+
 Figure 3: Numerical summary of genres for all of the different games 
 After getting a graph of the different genres of the games, there definitely were a lot more games for certain genres such as crime and thriller than adventure and action which could’ve perhaps led to varying results. 
 # PREPROCESSING 
@@ -34,6 +37,7 @@ To get all the data into a format to process, we had to find a way to put everyt
 	standardized_value =  (value - mean) / (max - min)
  
 ![Capture-2024-01-06-224849](https://github.com/awnby/videoGameRecommender/assets/151482772/7591709c-5ddc-4a15-ae72-f2fbf022574d)
+
 Figure 3.1 : Dataframe after preprocessing (users by games and genres) 
 # ANALYSIS 
 The final step in our process was to apply two different algorithms on the processed data set that would be able to recommend the games. Our first baseline model we chose was cosine similarity while the more advanced one we used to build off of was singular value decomposition. 
@@ -41,9 +45,11 @@ The final step in our process was to apply two different algorithms on the proce
 For our baseline model, we chose to use cosine similarity which measures the cosine of the angle between two vectors and helps to determine how similar 2 things may be. This is often used in recommendation systems, especially in user based collaborative filtering. Below is the cosine similarity matrix that we ended up with.
 
 ![Capture-2024-01-06-224924](https://github.com/awnby/videoGameRecommender/assets/151482772/58b9c06d-1f6f-444a-8e87-b50e64ba7e6c)
+
 Figure 4.1: Similarity matrix of correlation between different users 
 
 ![Capture-2024-01-06-224944](https://github.com/awnby/videoGameRecommender/assets/151482772/aaaf3c86-8203-4704-8032-f8fbdad9e145)
+
 Figure 4.2: Dataframe of each user’s top three most similar users  
 Using this matrix, we are now able to compile a list of any given user’s top three “most similar” users, which we thought to create a dataframe out of, as seen to the right.
     With this, we may now build a small recommendation program, which will take an inputted user, and output a list of games for them to play. This is done by iterating through the input’s corresponding tuple in Figure 4.2, and grabbing a sample of each of their most similar users’ most played games. After filtering out any game that is also found in the top five most played games of the input, the program now has a list of recommendations.
@@ -61,9 +67,11 @@ In order to accomplish all of this, we utilized sklearn to perform our analysis 
 A simple sample run of the program on the game “8BitMMO” returns “Scribblenauts Unlimited” as the most similar game. This is an appropriate recommendation as both games are creative sandbox games, so if someone plays “8BitMMO” for a lot of hours, they’re quite likely to like “Scribblenauts Unlimited” as it is similar in terms of the hours spent playing. 
 
 ![Capture-2024-01-06-225002](https://github.com/awnby/videoGameRecommender/assets/151482772/6bbc225c-b7ae-43e0-95a3-1ec53b7e55df)
+
 Figure 4.3 Correlation matrix of video games 
 
 ![Capture-2024-01-06-225020](https://github.com/awnby/videoGameRecommender/assets/151482772/87f9e8c1-2492-4d58-8382-6c50d84c303f)
+
 Figure 4.4 20x20 sample correlation matrix of video games 
 # CONCLUSIONS
 The recommendation system that came out of the algorithms are observed to make effective game recommendations from the database. From a rudimentary observation comparing the genres of the input games and the output recommended games, we can see that it is effectively recommending games with similar genres.

@@ -1,3 +1,6 @@
+# Some Context
+Hi! Here's a repo I created to keep this particular school project I had done with two of my friends (Ethan and Amber) for our Data Mining course on creating a video game recommendation system. I want to continue this project, using more complex machine learning techniques to improve on it, and maybe creating a web app to make it usable! Anyways, here's the report we created for our class. I worked on the data preprocessing and EDA with Amber as well as the cosine similarity system (by myself :D), while Ethan and Amber worked on the SVD portion of the project. I will keep this repo updated whenever I choose to extend upon this. Enjoy!
+
 # ABSTRACT
 The purpose was to be able to create a recommendation system for Steam video games based on various genres and the hours played by different users. There were two datasets utilized from Kaggle.com, the first one being about IMDB games and the other about Steam games. The paper observes the effect of two different techniques, with cosine similarity as the baseline and singular value decomposition to build off it to see how well it can recommend games based on certain attributes. Through various features such as different games and user data, the results were visualized through both a heatmap and similarity matrix.
 
